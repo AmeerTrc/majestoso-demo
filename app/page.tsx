@@ -11,17 +11,21 @@ const categories = [
 ];
 
 function InstagramIcon() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle className="fill" cx="17.4" cy="6.7" r="1"/></svg>;
+  return <svg className="instagramIcon" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="majestosoInstagramGradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stopColor="#FCAF45"/><stop offset=".34" stopColor="#F77737"/><stop offset=".68" stopColor="#E1306C"/><stop offset="1" stopColor="#833AB4"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle className="fill" cx="17.4" cy="6.7" r="1"/></svg>;
 }
 
 function WhatsAppIcon() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.9a8.4 8.4 0 1 1 16.1-3.9Z"/><path d="M8.2 7.8c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.9c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4-.1.7.5 1 1.3 1.8 2.3 2.3.3.2.5.1.7-.1l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.4-.7 2-.6.7-1.5.9-2.4.7-1.2-.2-2.8-.8-4.6-2.4-2.1-1.9-3.3-4.3-3.4-5.5 0-.5.1-.8.6-1Z"/></svg>;
+  return <svg className="whatsappIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.9a8.4 8.4 0 1 1 16.1-3.9Z"/><path d="M8.2 7.8c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.9c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4-.1.7.5 1 1.3 1.8 2.3 2.3.3.2.5.1.7-.1l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.4-.7 2-.6.7-1.5.9-2.4.7-1.2-.2-2.8-.8-4.6-2.4-2.1-1.9-3.3-4.3-3.4-5.5 0-.5.1-.8.6-1Z"/></svg>;
+}
+
+function HeaderSocialPreview() {
+  return <div className="headerSocial" aria-label="Prévia de canais sociais"><span aria-disabled="true" title="Em breve — Instagram"><InstagramIcon/><i>Instagram — em breve</i></span><span aria-disabled="true" title="Em breve — WhatsApp"><WhatsAppIcon/><i>WhatsApp — em breve</i></span></div>;
 }
 
 export default function Home() {
   const schema = {"@context":"https://schema.org","@type":"Restaurant",name:"Majestoso",description:"Demonstração conceitual não oficial do Majestoso.",address:{"@type":"PostalAddress",streetAddress:"Largo do Paissandú, 17 - República",addressLocality:"São Paulo",addressRegion:"SP",postalCode:"01034-010",addressCountry:"BR"}};
   return <>
-    <header className="nav" aria-label="Navegação principal"><a className="brand" href="#inicio" aria-label="Majestoso — início"><span>M</span><b>MAJESTOSO</b></a><nav><a href="#sobre">O Majestoso</a><a href="#cardapio">Cardápio</a><a href="#ambiente">Ambiente</a><a href="#localizacao">Localização</a></nav><a className="navCta" href="#cardapio">Ver cardápio <span>↘</span></a></header>
+    <header className="nav" aria-label="Navegação principal"><a className="brand" href="#inicio" aria-label="Majestoso — início"><span>M</span><b>MAJESTOSO</b></a><nav><a href="#sobre">O Majestoso</a><a href="#cardapio">Cardápio</a><a href="#ambiente">Ambiente</a><a href="#localizacao">Localização</a></nav><div className="navActions"><HeaderSocialPreview/><a className="navCta" href="#cardapio">Ver cardápio <span>↘</span></a></div></header>
     <main id="inicio">
       <section className="hero shell"><div className="heroCopy"><p className="eyebrow">A LANCHONETE MAJESTOSO · CENTRO</p><h1>Sabor no<br/>coração de<br/><em>São Paulo.</em></h1><p className="lead">Lanches, café, bebidas e a energia de uma pausa no coração da cidade.</p><div className="actions"><a className="button primary" href="#cardapio">Ver cardápio <span>↘</span></a><a className="button outline" href={maps} target="_blank" rel="noreferrer">Como chegar <span>⌖</span></a></div><div className="heroMeta"><span>REPÚBLICA</span><span>01034-010</span></div></div><figure className="heroVisual"><img src="/images/majestoso-neon.jpg" alt="Identidade neon do Majestoso com o personagem coroado" fetchPriority="high"/><figcaption><span>Identidade Majestoso</span><b>NEON · VERMELHO · OURO</b></figcaption></figure></section>
       <section className="highlights shell" aria-label="Destaques do Majestoso"><article><span>01</span><div><b>Lanches</b><small>Para uma pausa completa</small></div></article><article><span>02</span><div><b>Café</b><small>Um clássico do dia a dia</small></div></article><article><span>03</span><div><b>Drinks</b><small>Opções para diferentes momentos</small></div></article><article><span>04</span><div><b>No coração de São Paulo</b><small>Largo do Paissandú</small></div></article></section>
