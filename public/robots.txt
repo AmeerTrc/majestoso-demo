@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Demonstração conceitual não oficial.

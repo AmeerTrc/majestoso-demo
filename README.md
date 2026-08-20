@@ -2,10 +2,18 @@
 
 Unofficial concept/demo website created as a design proposal for Majestoso, Largo do Paissandú, São Paulo.
 
-This project is not the official Majestoso website. It was developed by Ameer Mustafa exclusively for presentation and evaluation. Commercial information must be confirmed before any official release.
+This project is not the official Majestoso website. It was created exclusively for presentation and evaluation by Ameer Mustafa.
 
 ## Development
-`npm ci && npm run dev`
+
+```bash
+npm install
+npm run dev
+```
 
 ## Production
-`npm run build && npm start`
+
+```bash
+npm run build
+npm start
+```
